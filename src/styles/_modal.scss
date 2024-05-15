@@ -1,0 +1,34 @@
+@use 'variaveis';
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: variaveis.$corDeFundoPrincipal;
+    z-index: 9999;
+    overflow: auto;
+}
+
+.modal__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: variaveis.$corDeFundosecundario;
+    padding: 20px;
+    border: 2px solid variaveis.$corTextoSecundario;
+}
+
+
+.modal__closeButton {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    font-size: 9px;
+    color: variaveis.$corDeFundoBotaoative;
+    cursor: pointer;
+    width: 30px;
+}

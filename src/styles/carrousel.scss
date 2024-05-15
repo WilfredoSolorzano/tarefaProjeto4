@@ -1,0 +1,73 @@
+@use 'variaveis';
+
+#carrousel{
+    padding-top: 0px;
+    padding-bottom: 36px;
+    margin-top: -36px;
+    margin-bottom: 20px;
+}
+
+.img1{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50%; 
+    width: 70%;
+    max-width: 570px;
+    }
+
+    .carousel-container {
+    margin-top: 4.5rem; 
+    margin-bottom: 2rem; 
+    position: relative;
+    width: 70%;
+    }
+
+
+.carousel-control-prev{
+    left:200px;
+}
+.carousel-control-next {
+        right: 200px;
+        
+    }
+
+    h3{
+        position: absolute;
+        top: -4%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+        background-color: variaveis.$corDehover; 
+        color: variaveis.$corTextoSecundario; 
+        padding: 10px 20px; 
+        border-radius: 5px; 
+        z-index: 999; 
+    }
+
+    @media (max-width: 768px) {
+        #carrousel{
+            padding-top: 16px;
+            margin-top: 26px;
+        }
+        .carousel-inner {
+            .carousel-item {
+                img {
+                    max-width: 100%; 
+                }
+
+                .carousel-caption {
+                    display: none; 
+                }
+            }
+        }
+
+        .carousel-indicators {
+            display: none; 
+        }
+
+        h3{
+            top: -33px;
+            font-size: 17px;
+            text-align: center;
+        }
+    }

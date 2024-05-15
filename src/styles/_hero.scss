@@ -1,0 +1,95 @@
+@use 'variaveis';
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 165px;
+  padding: 5%;
+  background-color: transparent;
+  background-image: url('../../dist/images/hero/spidey02_ons_var_dsk_01.jpg');
+  background-size: initial;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+.hero__content {
+  display: flow-root;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.hero__text-container {
+  margin-bottom: 20px;
+}
+
+.hero__title {
+  margin-bottom: 10px;
+}
+
+.hero__title img {
+  padding-top: 240px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.hero__social-nav {
+  align-self: flex-start;
+}
+
+.hero__social-list {
+  list-style: none;
+  padding: 0;
+  float: inline-end;
+}
+
+.hero__social-item {
+  margin-bottom: 10px;
+}
+
+.hero__social-link img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+
+
+.header--is-hidden {
+  transform: translateY(-100%);
+  transition: transform 0.1s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .hero {
+      grid-template-columns: 1fr; 
+      gap: 20px; 
+      background-image: url('../../dist/images/hero/spidey02_ons_var_dsk_mobile.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: left center;
+  }
+  .hero__social-item {
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-left: 10px;
+  }
+  .hero__social-list {
+    list-style: none;
+    padding: 0;
+    float: inline-end;
+    margin-top: 25px;
+  }
+
+  .shows {
+      padding: 20px; 
+  }
+
+  .carousel-item__image {
+      max-width: 100%; 
+  }
+}

@@ -1,0 +1,104 @@
+@use 'variaveis';
+
+.highlighted-section {
+    padding: 20px;
+
+    .bordered-container {
+        border: 2px solid variaveis.$corFundoBlack;
+        padding: 20px;
+        background-color: variaveis.$corFundoWhite;
+    }
+}
+
+    .image-text-section {
+        padding: 5.6vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    
+        @media (max-width: 768px) {
+            display: block;
+        }
+    
+        img {
+            max-width: 100%;
+        }
+    
+        &__text_container {
+            padding: 0 2vw;
+    
+            h2 {
+                margin-bottom: 24px;
+            }
+        }
+    
+        &--image-full-width {
+            display: block;
+            position: relative;
+    
+    
+            &__text_container {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                height: 100%;
+                width: calc(50% - 5.6vw);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+    
+                @media (max-width: 768px) {
+                    position: relative;
+                    left: 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+.buttons__spider {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 auto;
+    text-decoration: none;
+    color: variaveis.$corTextoSecundario;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 160px;
+    text-align: center;
+    background-color: variaveis.$corDehover;
+  }
+
+  .video-section {
+    display: none; 
+    padding: 20px;
+    border: 2px solid variaveis.$corFundoBlack;
+    margin-top: 20px;
+
+    &.active{
+        display: block; 
+    }
+}
+
+
+
+#localVideo {
+    width: 100%; 
+    height: auto; 
+}
+
+
+#closeTrailerButton {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: variaveis.$corDeFundoBotaoative;
+    color: variaveis.$corTextoPrincipal;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+#closeTrailerButton:hover {
+    background-color: variaveis.$corDeFundoBotaoative;
+}
